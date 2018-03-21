@@ -155,9 +155,11 @@ class Frustration
         if($i == 1) { return $x * $y; }
 
         $result = 0;
+
         for ($r = 1; $r <= $x - $i + 1; $r++) {
             $result += $y * $this->getN($i - 1, $x - $r, $y - 1);
         }
+        
         return $result;
     }
 
@@ -209,9 +211,11 @@ class Frustration
     private function factorial($n)
     {
         $factorial = 1;
+
         for ($x = $n; $x >= 1; $x--) {
             $factorial = $factorial * $x;
         }
+
         return $factorial;
     }
 }
