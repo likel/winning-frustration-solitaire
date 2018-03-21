@@ -159,7 +159,7 @@ class Frustration
         for ($r = 1; $r <= $x - $i + 1; $r++) {
             $result += $y * $this->getN($i - 1, $x - $r, $y - 1);
         }
-        
+
         return $result;
     }
 
@@ -194,8 +194,11 @@ class Frustration
     {
         $product = array();
 
-        for ($i = 0; $i <= count($polynomial_a); $i++) {
-            for ($j = 0; $j <= count($polynomial_b); $j++) {
+        for ($i = 0; $i < count($polynomial_a); $i++) {
+            for ($j = 0; $j < count($polynomial_b); $j++) {
+                if(!isset($product[$i + $j])) {
+                    $product[$i + $j] = 0;
+                }
                 $product[$i + $j] += $polynomial_a[$i] * $polynomial_b[$j];
             }
         }
