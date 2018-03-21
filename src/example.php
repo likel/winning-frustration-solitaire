@@ -11,6 +11,11 @@
  *
  * Inspiration and formulae sourced from https://github.com/jaycoskey/FrustrationSolitaire
  *
+ * This example can be run from a webbrowser or the CLI like so:
+ *      Browser: navigate to example.php
+ *      CLI: $ php example.php {number_of_cards} {number_of_suits}
+ *           $ php example.php 13 4
+ *
  * @package     winning-frustration-solitaire
  * @author      Liam Kelly <https://github.com/likel>
  * @copyright   2018 Liam Kelly
@@ -20,9 +25,10 @@
  */
 require_once("models/Frustration.php");
 
-$number_of_cards = 13;
-$number_of_suits = 4;
+$number_of_cards = !empty($argv[1]) ? $argv[1] : 13;
+$number_of_suits = !empty($argv[2]) ? $argv[2] : 4;
+
 $frustration = new Likel\Frustration($number_of_cards, $number_of_suits);
 $chance = $frustration->getChanceAsPercentage();
 
-echo $chance;
+echo $chance . PHP_EOL;
