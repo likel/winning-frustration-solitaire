@@ -11,6 +11,8 @@ https://en.wikipedia.org/wiki/Frustration_(solitaire)
 https://arxiv.org/pdf/math/0703900.pdf
 
 # How to run
-Run example.php from the CLI, e.g. in linux: $ php example.php {number_of_cards} {number_of_suits}
-
+Run example.php from the CLI, e.g. in linux: 
+```
+$ php example.php {number_of_cards} {number_of_suits}
+```
 Run example.php in a web browser
