@@ -31,4 +31,4 @@ $number_of_suits = !empty($argv[2]) ? $argv[2] : 4;
 $frustration = new Likel\Frustration($number_of_cards, $number_of_suits);
 $chance = $frustration->getChanceAsPercentage();
 
-echo $chance . PHP_EOL;
+echo "Playing Frustration Solitaire with {$number_of_cards} cards and {$number_of_suits} suits yields a {$chance}% chance of winning." . PHP_EOL;
