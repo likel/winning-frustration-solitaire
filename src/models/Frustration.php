@@ -73,7 +73,7 @@ class Frustration
         $number_of_cards = empty($number_of_cards) ? $this->number_of_cards : $number_of_cards;
         $number_of_suits = empty($number_of_suits) ? $this->number_of_suits : $number_of_suits;
 
-        // Get the move allows
+        // Get the moves allowed
         $allowed_moves = $this->getMovesAllowed($number_of_cards, $number_of_suits);
 
         // (number_of_cards * number_of_suits)! all possible moves
