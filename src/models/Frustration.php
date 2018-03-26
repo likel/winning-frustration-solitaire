@@ -84,12 +84,11 @@ class Frustration
 
     /**
      * Return the chance property
-     * @param $as_percentage Return the chance as a percentage
      * @return float
      */
-    public function getChance($as_percentage = false)
+    public function getChance()
     {
-        return $as_percentage ? 100 * $this->chance : $this->chance;
+        return $this->chance;
     }
 
     /**
@@ -99,7 +98,7 @@ class Frustration
      */
     public function getChanceAsPercentage($decimal_places = 3)
     {
-        return (float)number_format((float)$this->getChance(true), $decimal_places, '.', '');
+        return (float)number_format((float)($this->getChance() * 100), $decimal_places, '.', '');
     }
 
     /**
